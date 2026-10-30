@@ -1,0 +1,10 @@
+services:
+  wind-decision-desk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      ELEXON_API_BASE_URL: https://data.elexon.co.uk/bmrs/api/v1
+      PORT: 8000
