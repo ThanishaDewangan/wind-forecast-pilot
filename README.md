@@ -94,7 +94,11 @@ npm audit
 
 ## Deployment
 
-The app is packaged as one container and includes a Heroku container deployment configuration. After creating a Heroku app and authenticating with the Heroku CLI, deploy from the repository root:
+**Live pilot:** [https://wind-forecast-pilot.onrender.com/](https://wind-forecast-pilot.onrender.com/)
+
+The app is deployed on Render as a Docker web service. The live homepage and API health endpoint were verified after deployment. Render's free web services may spin down after inactivity, so the first request after a quiet period can take longer to respond.
+
+The app is also packaged with Heroku container configuration. To deploy to Heroku instead, create and verify a Heroku app, authenticate with the Heroku CLI, then run from the repository root:
 
 ```powershell
 heroku container:login
@@ -103,18 +107,9 @@ heroku container:release web --app YOUR_HEROKU_APP
 heroku open --app YOUR_HEROKU_APP
 ```
 
-The server honors the platform-provided `PORT`. Heroku account access and a configured billing plan are needed; they are not available in this workspace.
+The server honors the platform-provided `PORT`. Heroku requires account verification/payment information to create an app.
 
-This workspace does not have access to a GitHub account or hosting credentials, so no public repository or hosted URL has been created. Create a new public GitHub repository with a random name, then publish the local project with:
-
-```powershell
-git remote add origin https://github.com/YOUR_ACCOUNT/YOUR_RANDOM_REPO.git
-git push -u origin main
-```
-
-Replace the placeholders after creating the repository and replace the deployment placeholder below with the Heroku URL after deployment.
-
-**Hosted app:** Not deployed yet — requires the owner's GitHub/Heroku account and credentials.
+**Source repository:** [https://github.com/ThanishaDewangan/wind-forecast-pilot](https://github.com/ThanishaDewangan/wind-forecast-pilot)
 
 ## Video demo (required handoff)
 
